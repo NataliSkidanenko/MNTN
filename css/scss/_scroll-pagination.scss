@@ -1,0 +1,21 @@
+.scroll-pagination {
+    position: fixed;
+    right: (100% - (1760 / 1920) * 100%) / 2;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    z-index: 1200;
+
+    .scroll-pagination__link {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+        border-right: 3px solid rgba($text-color, $alpha: 0.5);
+
+        &.active {
+            border-color: $text-color;
+        }
+    }
+
+
+}

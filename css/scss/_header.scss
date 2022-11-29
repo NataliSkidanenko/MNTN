@@ -1,0 +1,37 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 145px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: toPercent(1760, 1920);
+    }
+}
+
+.menu {
+    .menu__list {
+        display: flex;
+        li {
+            margin: 0 40px;
+        }
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    font-size: 0.91rem;
+    background: none;
+
+    &__img {
+        margin: 0 8px 0 0;
+    }
+}

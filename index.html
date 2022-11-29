@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MNTN</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">
+                <img src="./img/header/logo.svg" alt="Logo MNTN">
+            </div>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li><a href="#" class="menu__link">Equipment</a></li>
+                    <li><a href="#" class="menu__link">About us</a></li>
+                    <li><a href="#" class="menu__link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions actions">
+                <button class="actions__item action">
+                    <img src="./img/header/account.svg" alt="Account icon" class="action__img">
+                    <span class="action__text">Account</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social -->
+    <div class="social">
+        <div class="social__container">
+            <p class="social__text">Follow us</p>
+            <a href="#" class="social__link"><img src="./img/social/instagram.svg" alt="Instagram"></a>
+            <a href="#" class="social__link"><img src="./img/social/twitter.svg" alt="Twitter"></a>
+        </div>
+    </div>
+    
+    <!-- Scroll-nagination -->
+    <div class="scroll-pagination">
+        <div class="scroll-pagination__container">
+            <ul class="scroll-pagination__list">
+                <li>
+                    <a href="#section-0" class="scroll-pagination__link active">Start</a>
+                </li>
+                <li>
+                    <a href="#section-1" class="scroll-pagination__link">01</a>
+                </li>
+                <li>
+                    <a href="#section-2" class="scroll-pagination__link">02</a>
+                </li>
+                <li>
+                    <a href="#section-3" class="scroll-pagination__link">03</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <main class="hero parallax" id="section-0">
+        <div class="hero__container container">
+            <div class="hero__content main">
+                <div class="main__subtitle">
+                    <span class="line"></span>
+                    <p class="text">A Hiking guide</p>
+                </div>
+                <h1 class="main__title">Be prepared for the Mountains and beyond!</h1>
+                <a href="#section-1" class="main__link link">
+                    <span>scroll down</span>
+                    <img src="./img/common/arrow-down.svg" alt="Arrow down">
+                </a>
+            </div>
+        </div>
+        <div class="parallax__bg parallax__bg--1"></div>
+        <div class="parallax__bg parallax__bg--2"></div>
+        <div class="parallax__bg parallax__bg--3"></div>
+        <div class="parallax__bg parallax__bg--4"></div>
+    </main>
+
+    <!-- Articles -->
+    <div class="articles">
+        <div class="articles__container container">
+            <section class="articles__item article" id="section-1"></section>
+            <section class="articles__item article" id="section-2"></section>
+            <section class="articles__item article" id="section-3"></section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__block footer__block--big"></div>
+        <div class="footer__block"></div>
+        <div class="footer__block"></div>
+    </footer>
+
+    <script src="./js/parallax.js"></script>
+</body>
+</html>
