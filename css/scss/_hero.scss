@@ -1,10 +1,11 @@
 .hero {
     min-height: 100vh;
+    margin-bottom: -40vh;
 
     &__container {
         position: absolute;
         width: 100%;
-        height: 70%;
+        height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,10 +23,11 @@
 
 .main {
     &__title {
-        margin: 32px 0;
+        margin-bottom: 32px;
         font-family: $accent-font;
         font-size: 4.889rem;
         text-transform: capitalize;
+        line-height: 5.55rem;
 
         @media (max-width: 1440px) {
             font-size: 4.4rem;
@@ -34,6 +36,7 @@
 
     &__subtitle {
         display: flex;
+        margin-bottom: 32px;
         align-items: center;
         color: $accent-color;
         text-transform: uppercase;
@@ -60,17 +63,18 @@
 
 .parallax {
     position: relative;
-    min-height: 135vh;
+    min-height: 140vh;
+    z-index: 0;
 
     &__bg {
-        width: 100%;
         position: absolute;
-        height: 135vh;
+        width: 100%;
+        height: 100%;
         background-repeat: no-repeat;
         
 
         &--1 {
-            background: url(../img/hero/bg-1.png) no-repeat;
+            background: url(../img/hero/sky.jpg) no-repeat;
             background-size: 110% 110%;
             background-attachment: fixed;
             background-position: 0 0;
@@ -78,29 +82,19 @@
         }
         
         &--2 {
-            background: url(../img/hero/bg-2.png) no-repeat;
+            background: url(../img/hero/mountain.png) no-repeat;
             background-size: 110% 110%;
-            background-attachment: fixed;
             background-position: 0 0;
             z-index: 2;
         }
         
         &--3 {
-            background: url(../img/hero/bg-3.png) no-repeat;
-            background-size: 110% 110%;
-            background-attachment: fixed;
-            background-position: 0 0;
-            z-index: 3;
-        }
-        
-        &--4 {
-            bottom: 0;
-            height: 50vh;
-            background: url(../img/hero/bg-4.png) repeat-x;
+            bottom: -1vh;
+            height: 70vh;
+            background: url(../img/hero/gradient.png) repeat-x;
             background-size: contain;
             background-position: center top;
             z-index: 4;
         }
     }
-
 }

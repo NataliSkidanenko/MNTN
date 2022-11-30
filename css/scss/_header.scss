@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -7,6 +7,12 @@
     top: 0;
     left: 0;
     z-index: 1000;
+
+    &--fixed {
+        position: fixed;
+        min-height: 70px;
+        background-color: rgba($main-color, $alpha: 0.4);
+    }
 
     &__container {
         display: flex;
@@ -17,10 +23,19 @@
 }
 
 .menu {
-    .menu__list {
+    &__list {
         display: flex;
         li {
             margin: 0 40px;
+        }
+    }
+
+    &__link {
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            @media (min-width: 1200px) {
+                color: $accent-color;
+            }
         }
     }
 }
