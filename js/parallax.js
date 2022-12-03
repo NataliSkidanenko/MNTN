@@ -1,4 +1,4 @@
-(function () {
+{
     document.addEventListener('mousemove', moveBackground);
     function moveBackground(e) {
         console.log(e);
@@ -20,4 +20,4 @@
             `background-position: ${bgSecondOffsetX}px ${bgSecondOffsetY}px`
         );
     }
-})();
+}

@@ -118,8 +118,10 @@ a {
   color: #FFFFFF;
   transition: all 0.3s ease-in-out;
 }
-a:hover {
-  color: #FBD784;
+@media (min-width: 1200px) {
+  a:hover {
+    color: #FBD784;
+  }
 }
 
 p {
@@ -128,6 +130,7 @@ p {
 
 button {
   color: #FFFFFF;
+  background: none;
 }
 
 .container {
@@ -148,10 +151,20 @@ button {
   left: 0;
   z-index: 1000;
 }
+@media (max-width: 960px) {
+  .header {
+    min-height: 85px;
+  }
+}
 .header--fixed {
   position: fixed;
+  width: 90%;
+  left: 50%;
   min-height: 70px;
-  background-color: rgba(20, 31, 37, 0.4);
+  background-color: rgba(11, 17, 20, 0.4);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  transform: translate(-50%, 0);
 }
 .header__container {
   display: flex;
@@ -159,12 +172,20 @@ button {
   align-items: center;
   width: 91.6666666667%;
 }
+.header__actions {
+  display: flex;
+}
 
 .menu__list {
   display: flex;
 }
 .menu__list li {
   margin: 0 40px;
+}
+@media (max-width: 960px) {
+  .menu {
+    display: none;
+  }
 }
 .menu__link {
   transition: all 0.3s ease-in-out;
@@ -175,16 +196,121 @@ button {
   }
 }
 
-.action {
+.account {
   display: flex;
   align-items: center;
   font-size: 0.91rem;
   background: none;
 }
-.action__img {
+.account__img {
   margin: 0 8px 0 0;
 }
 
+.menu-button {
+  display: none;
+  width: 30px;
+  margin-left: 32px;
+}
+.menu-button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #FFFFFF;
+}
+@media (max-width: 960px) {
+  .menu-button {
+    display: block;
+  }
+}
+
+.modal-block {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(11, 17, 20, 0.9);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+.modal-block.animation-in {
+  -webkit-animation: 0.5s ease-in-out appear-in;
+          animation: 0.5s ease-in-out appear-in;
+}
+.modal-block.animation-out {
+  -webkit-animation: 0.5s ease-in-out appear-out;
+          animation: 0.5s ease-in-out appear-out;
+}
+.modal-block__close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50px;
+  height: 50px;
+}
+.modal-block__close span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+.modal-block__close span:first-child {
+  transform: rotate(45deg);
+}
+.modal-block__close span:last-child {
+  transform: rotate(-45deg);
+  margin-top: -4px;
+}
+.modal-block .modal-menu__list {
+  text-align: center;
+}
+.modal-block .modal-menu__link {
+  display: block;
+  margin: 20% 0;
+  font-size: 3rem;
+}
+
+@-webkit-keyframes appear-in {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes appear-in {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@-webkit-keyframes appear-out {
+  0% {
+    top: 0;
+    transform: scale(1);
+  }
+  100% {
+    top: -100%;
+    transform: scale(0.4);
+  }
+}
+@keyframes appear-out {
+  0% {
+    top: 0;
+    transform: scale(1);
+  }
+  100% {
+    top: -100%;
+    transform: scale(0.4);
+  }
+}
 .social {
   position: fixed;
   left: 4.1666666667%;
@@ -232,7 +358,7 @@ button {
 .hero__container {
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,6 +383,12 @@ button {
 @media (max-width: 1440px) {
   .main__title {
     font-size: 4.4rem;
+  }
+}
+@media (max-width: 960px) {
+  .main__title {
+    font-size: 2.8rem;
+    line-height: 3.7rem;
   }
 }
 .main__subtitle, .article__subtitle {
@@ -343,7 +475,7 @@ button {
 }
 .article__block--text1::before {
   position: absolute;
-  top: -22%;
+  top: -18%;
   left: -14%;
   content: "01";
   font-size: 13.3rem;

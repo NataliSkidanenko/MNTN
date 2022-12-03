@@ -24,10 +24,28 @@
                 </ul>
             </nav>
             <div class="header__actions actions">
-                <button class="actions__item action">
-                    <img src="./img/header/account.svg" alt="Account icon" class="action__img">
-                    <span class="action__text">Account</span>
+                <button class="actions__item account">
+                    <img src="./img/header/account.svg" alt="Account icon" class="account__img">
+                    <span class="account__text">Account</span>
                 </button>
+                <button class="action__item menu-button" id="menu-open">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="header__modal-block modal-block">
+                <button class="modal-block__close" id="menu-close">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="modal-menu">
+                    <ul class="modal-menu__list">
+                        <li><a href="#" class="modal-menu__link">Equipment</a></li>
+                        <li><a href="#" class="modal-menu__link">About us</a></li>
+                        <li><a href="#" class="modal-menu__link">Blog</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -241,6 +259,7 @@
     </footer>
 
     <script src="./js/header.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/scroll-pagination.js"></script>
     <script src="./js/parallax.js"></script>
 </body>
