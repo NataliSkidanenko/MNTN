@@ -1,3 +1,3 @@
 # MNTN
 
-Look here -> https://nataliskidanenko.github.io/mntn
+Look here -> https://nataliskidanenko.github.io/MNTN/
