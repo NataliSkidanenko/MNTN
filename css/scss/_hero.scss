@@ -5,30 +5,37 @@
     &__container {
         position: absolute;
         width: 100%;
-        height: 65%;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 180px;
         z-index: 10;
 
-        @media screen and (max-width: 640px) {
-            height: 60%;
+        @media screen and (max-width: 1200px) {
+            margin-top: 130px;
         }
-
-        @media screen and (max-width: 375px) {
-            height: 65%;
+        @media screen and (max-width: 768px) {
+            margin-top: 200px;
+        }
+        @media screen and (max-height: 480px) and (min-width: 600px) {
+            margin-top: 100px;
         }
     }
 
     &__content {
         width: (950 / 1920) * 100%;
 
-        @media screen and (max-width: 1440px) {
-            width: 52%;
+        @media screen and (max-width: 1024px) {
+            width: 40%;
         }
-
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
         @media screen and (max-width: 480px) {
-            width: 70%;
+            width: 90%;
+        }
+        @media screen and (max-height: 480px) and (min-width: 600px) {
+            width: 50%;
         }
     }
 }
@@ -37,22 +44,23 @@
     &__title {
         margin-bottom: 32px;
         font-family: $accent-font;
-        font-size: 4.889rem;
+        font-size: 4.3rem;
         text-transform: capitalize;
         line-height: 5.55rem;
 
-        @media screen and (max-width: 1440px) {
-            font-size: 4.4rem;
-        }
-
-        @media screen and (max-width: 960px) {
-            font-size: 2.8rem;
-            line-height: 3.7rem;
+        @media screen and (max-width: 1200px) {
+            font-size: 3.3rem;
+            line-height: 4.2rem;
         }
 
         @media screen and (max-width: 480px) {
-            font-size: 2.2rem;
-            line-height: 3.1rem;
+            font-size: 2.5rem;
+            line-height: 2.9rem;
+        }
+
+        @media screen and (max-height: 480px) and (min-width: 600px) {
+            font-size: 2.5rem;
+            line-height: 2.9rem;
         }
     }
 
@@ -70,11 +78,6 @@
             height: 2px;
             margin: 0 32px 0 0;
             background-color: $accent-color;
-
-            @media screen and (max-width: 640px) {
-                width: 42px;
-                margin-right: 15px;
-            }
         }
     }
 
@@ -89,6 +92,8 @@
 }
 
 .parallax {
+    display: flex;
+    justify-content: center;
     position: relative;
     min-height: 140vh;
     z-index: 0;
@@ -101,10 +106,14 @@
 
         &--1 {
             background: url(../img/hero/sky.jpg) no-repeat;
-            background-size: auto 150%;
+            background-size: 110% auto;
             background-attachment: fixed;
-            background-position: left 50% top 50%;
+            background-position: left 50% top -2%;
             z-index: 1;
+
+            @media screen and (max-width: 1024px) {
+                background-size: cover;
+            }
         }
 
         &--2 {

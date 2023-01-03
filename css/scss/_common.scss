@@ -10,12 +10,8 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
     scroll-behavior: smooth;
-
-    @media screen and (max-width: 1440px) {
-        font-size: 16px;
-    }
 }
 
 body {
@@ -28,12 +24,6 @@ body {
 a {
     color: $text-color;
     transition: all 0.3s ease-in-out;
-
-    @media screen and (min-width: 1200px) {
-        &:hover {
-            color: $accent-color;
-        }
-    }
 }
 
 p {
@@ -46,14 +36,17 @@ button {
 }
 
 .container {
-    width: toPercent(1462, 1920);
+    max-width: 1170px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 15px;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 768px) {
         width: 80%;
     }
 
-    @media screen and (max-width: 375px) {
-        width: 92%;
+    @media screen and (max-width: 480px) {
+        width: 90%;
     }
 }
 

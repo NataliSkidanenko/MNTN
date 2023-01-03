@@ -2,15 +2,15 @@
     const modalMenu = document.querySelector('.modal-block');
     const buttonOpenMenu = document.querySelector('#menu-open');
     const buttonCloseMenu = document.querySelector('#menu-close');
+
     buttonOpenMenu.addEventListener('click', openMenu);
-    buttonOpenMenu.addEventListener('touchstart', openMenu);
     buttonCloseMenu.addEventListener('click', closeMenu);
-    buttonCloseMenu.addEventListener('touchstart', closeMenu);
 
     function openMenu() {
         modalMenu.classList.add('animation-in');
         modalMenu.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        return false;
     }
 
     function closeMenu() {
@@ -22,5 +22,6 @@
             modalMenu.style.display = 'none';
             document.body.style.overflow = 'auto';
         }, 500);
+        return false;
     }
 }

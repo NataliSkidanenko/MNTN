@@ -6,9 +6,9 @@
     min-height: 145px;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10;
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1024px) {
         min-height: 85px;
     }
 
@@ -42,7 +42,7 @@
         }
     }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 
@@ -71,6 +71,7 @@
     display: none;
     width: 30px;
     margin-left: 32px;
+    cursor: pointer;
 
     span {
         display: block;
@@ -80,7 +81,7 @@
         background-color: $text-color;
     }
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1024px) {
         display: block;
     }
 }
@@ -144,20 +145,18 @@
 
 @keyframes appear-in {
     0% {
-        top: -100%;
+        opacity: 0;
     }
     100% {
-        top: 0%;
+        opacity: 1;
     }
 }
 
 @keyframes appear-out {
     0% {
-        top: 0;
-        transform: scale(1);
+        opacity: 1;
     }
     100% {
-        top: -100%;
-        transform: scale(0.4);
+        opacity: 0;
     }
 }
