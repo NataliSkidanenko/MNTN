@@ -20,24 +20,3 @@ buttonCloseMenu.onclick = function (e) {
         document.body.style.overflow = 'auto';
     }, 500);
 };
-// buttonOpenMenu.addEventListener('click', openMenu);
-// buttonCloseMenu.addEventListener('click', closeMenu);
-
-// function openMenu(e) {
-//     e.preventDefault();
-//     modalMenu.classList.add('animation-in');
-//     modalMenu.style.display = 'flex';
-//     document.body.style.overflow = 'hidden';
-// }
-
-// function closeMenu(e) {
-//     e.preventDefault();
-//     modalMenu.classList.remove('animation-in');
-//     modalMenu.classList.add('animation-out');
-
-//     setTimeout(() => {
-//         modalMenu.classList.remove('animation-out');
-//         modalMenu.style.display = 'none';
-//         document.body.style.overflow = 'auto';
-//     }, 500);
-// }

@@ -168,7 +168,6 @@ button {
   top: 0;
   left: 0;
   z-index: 4000;
-  background-color: #000;
 }
 @media screen and (max-width: 1024px) {
   .header {
@@ -241,7 +240,6 @@ button {
 @media screen and (max-width: 1024px) {
   .menu-button {
     display: block;
-    z-index: 5000;
   }
 }
 
